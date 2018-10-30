@@ -1,0 +1,24 @@
+.imgResponsive{
+    margin-top: 15px;
+    width : 100%
+}
+.descriptionContent {
+    display: block;
+    display: -webkit-box;
+    height: 30px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.arthname{display: block;}
+.arthname p {font-size:13px;}
+.arthname p:first-child{widht:45%; float:left; }
+.arthname p:last-child{width:45%; float:right; color:#c5c5c5;}
+.title {display: block;}
+.title p{font-size:14px; font-weight: 600;}
+.clearfix{clear:both;}
+.select-md {
+    padding: 5px 8px 13px 16px;
+}
+ion-select {max-width:80%;}

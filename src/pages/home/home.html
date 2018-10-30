@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-row>
+    <ion-col col-6>
+      <ion-title>
+        News Update
+      </ion-title>
+    </ion-col>
+    <ion-col col-6>
+      <ion-select class="sel_cat" side="right" [(ngModel)]="country" (ionChange)="changeCountry()">
+        <ion-title value="">Select Country</ion-title>
+        <ion-option *ngFor="let item of countryList" value={{item}}>{{item}}</ion-option>
+
+      </ion-select>
+    </ion-col>
+  </ion-row>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngFor="let item of outputData.articles">
+    <ng-container (onClick)='navigate(item.url)'>
+      <div class="arthname">
+        <p>Author</p>
+        <p>{{item.author}}</p>
+      </div>
+      <div class="clearfix"></div>
+      <div class="title">
+        <p>{{item.title}}</p>
+      </div>
+      <div class="title">
+        <p>Description</p>
+      </div>
+      <p class="descriptionContent">{{item.description}}</p>
+      <div>
+        <img alt="" src="{{item.urlToImage}}" class="imgResponsive" />
+      </div>
+      <div>
+        <p>{{item.content}}</p>
+      </div>
+      <div>
+        <p>{{item.source.name}}</p>
+      </div>
+      <br/>
+    </ng-container>
+  </div>
+</ion-content>
